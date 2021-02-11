@@ -1,5 +1,5 @@
 <?php
-
+require "classes/VOD.php";
 /**
  * 1. Créez une classe VOD et définissez les propriétés suivantes :
  *    - Créez une propriété films qui sera un tableau contenant 5 noms de films au choix.
@@ -11,9 +11,22 @@
  *
  * 2. Créez une instance VOD ayant le nom $netflix et initialisez la comme nous l'avons vu (dans index.php).
  *
- * 3. Créez une instance DOS ayant le nom $prime et initialisez la comme nous l'avons vu (dans index.php).
+ * 3. Créez une instance VOD ayant le nom $prime et initialisez la comme nous l'avons vu (dans index.php).
  *
  * 4. Invoquez la méthode addAbo() plusieurs fois pour les les objets créés, le nombre de fois n'a pas d'importance.
  *
  * 5. Invoquez la méthode vous permettant de récupérer le nombre total d'abonnements aux plateformes VOD de manière à afficher le nombre total d'abonnements.
  */
+
+
+
+$netflix = new VOD();
+VOD::addSub();
+VOD::addSub();
+VOD::addSub();
+
+$prime = new VOD();
+VOD::addSub();
+
+
+echo "<p>le nombre d'abonné total est ".VOD::getNbSubscriber()."</p>";
